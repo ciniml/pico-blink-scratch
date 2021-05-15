@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Pico Debug (WSL2)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "external",
+            "cwd": "${workspaceRoot}",
+            "runToMain": true,
+            "executable": "${command:cmake.launchTargetPath}",
+            "device": "RP2040",
+            "gdbTarget": "${env:PICO_OPENOCD_ADDRESS}:3333",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "runToEntryPoint": "main",
+        }
+    ]
+}
